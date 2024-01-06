@@ -2,9 +2,11 @@
   "name": "monorepo-rollup-template",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/es/index.js",
+  "types": "dist/type/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
@@ -27,15 +29,27 @@
     "@storybook/addon-links": "^7.6.7",
     "@storybook/addon-onboarding": "^1.0.10",
     "@storybook/blocks": "^7.6.7",
+    "@storybook/preset-scss": "^1.0.3",
     "@storybook/react": "^7.6.7",
     "@storybook/react-webpack5": "^7.6.7",
     "@storybook/test": "^7.6.7",
     "@types/react": "^18.2.46",
     "@types/react-dom": "^18.2.18",
+    "css-loader": "^6.8.1",
+    "postcss": "^8.4.33",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup": "^4.9.4",
-    "storybook": "^7.6.7"
+    "rollup-plugin-clear": "^2.0.7",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-url": "^3.0.1",
+    "sass": "^1.69.7",
+    "sass-loader": "^13.3.3",
+    "storybook": "^7.6.7",
+    "style-loader": "^3.3.3",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3"
   }
 }
